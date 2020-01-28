@@ -9,20 +9,20 @@ public class Ocean {
 
     public Ocean() {
         ocean = new Square[10][10];
+        this.fillOcean();
     }
 
     public Square[][] getOcean() {
         return ocean;
     }
 
-    public Square[][] fillOcean() {
-        System.out.println("");
+    private void fillOcean() {
+        // System.out.println("");
         for (Square[] line : ocean) {
             for (int i = 0; i < 10; i++) {
                 line[i] = new Square();
             }
         }
-        return ocean;
     }
 
     public void printOcean() {
