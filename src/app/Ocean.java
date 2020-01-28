@@ -36,13 +36,13 @@ public class Ocean {
         }System.out.println("");
     }
 
-    public List<Integer> shipHelper() {
-        List<Integer> shipLen = new ArrayList<>();
-        for (int i = 2; i < 6; i++) {
-            shipLen.add(i);
-        }
-        return shipLen;
-    }
+    // public List<Integer> shipHelper() {
+    //     List<Integer> shipLen = new ArrayList<>();
+    //     for (int i = 2; i < 6; i++) {
+    //         shipLen.add(i);
+    //     }
+    //     return shipLen;
+    // }
 
     
     public void placeShip(Ship ship) {
