@@ -34,11 +34,23 @@ public abstract class Player {
 
         int[] result = new int[2];
         // System.out.println(result);
+
+        if (coordinates.length() < 2){
         result[0] = x - 10;
         result[1] = y - 1;
+        }
+        else {
+            result[0] = x - 10;
+
+            result[1] = y + 8;
+        
         // System.out.println("x" + x + "y" + y);
 
         return result;
+        }
+
+        return result;
+    
     }
 
     public void recievedShoot(int[] coordinates) {

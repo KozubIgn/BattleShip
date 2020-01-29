@@ -9,7 +9,10 @@ public class AIPlayer extends Player {
         Random random = new Random();
         int randomNumberX = random.nextInt(numbers.length);
         int randomNumberY = random.nextInt(numbers.length);
-        return new int[] { randomNumberX, randomNumberY };
+
+        String result = String.valueOf(randomNumberX) + String.valueOf(randomNumberY);
+
+        return convertCoordniates(result); // Scanner from user
     }// Random from PC
 
 }

@@ -14,7 +14,7 @@ public class Main {
         // ocean.printOcean();
 
         Player humanPlayer = new HumanPlayer();
-        // humanPlayer.clearScreen();
+        humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
 
         Ship cruiser = new Ship(4, "[C]", 1, 0);
@@ -24,11 +24,10 @@ public class Main {
 
         // humanPlayer.printPlayerOcean();
 
-        
 
         // Ship hit = new Ship(1, "X", 9, 8);
         int[] coordinates = humanPlayer.createShoot();
-        int[] coordinatesAI = AIPlayer.createShoot();
+        // int[] coordinates2 = AIPlayer.createShoot(); // is not working
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
         humanPlayer.recievedShoot(coordinates);
