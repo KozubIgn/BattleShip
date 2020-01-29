@@ -1,20 +1,18 @@
 package app;
 
-import java.util.*;
-
-public abstract class Player{
+public abstract class Player {
 
     public Ocean playerBoard;
 
-    public Player(){
+    public Player() {
         playerBoard = new Ocean();
     }
 
-    public void printPlayerOcean(){
+    public void printPlayerOcean() {
         playerBoard.printOcean();
     }
-    
-    public void putShipOnOcean(Ship ship){
+
+    public void putShipOnOcean(Ship ship) {
         playerBoard.placeShip(ship);
     }
 
@@ -43,8 +41,8 @@ public abstract class Player{
         return result;
     }
 
-    public void recievedShoot(int[] coordinates){
-        playerBoard.shoot(coordinates); 
+    public void recievedShoot(int[] coordinates) {
+        playerBoard.shoot(coordinates);
 
     }
 }
