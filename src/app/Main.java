@@ -3,6 +3,8 @@ package app;
 
 public class Main {
 
+    
+
     public static void main(String[] args) {
 
         // Ocean ocean = new Ocean();
@@ -11,6 +13,8 @@ public class Main {
         // ocean.placeShip(cruiser);
         // ocean.placeShip(battleship);
         // ocean.printOcean();
+
+        Menu.menu();
 
         Player humanPlayer = new HumanPlayer();
         humanPlayer.printPlayerOcean();
