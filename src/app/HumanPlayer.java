@@ -1,10 +1,13 @@
 package app;
 
-public class HumanPlayer extends Player {
+import java.util.Scanner;
 
-    public int[] createShoot() {
-        String fromUser = "A1";
+public class HumanPlayer extends Player{
+
+    public int[] createShoot(String fromUser){
+        
         return convertCoordniates(fromUser); // Scanner from user
     }
+
 
 }

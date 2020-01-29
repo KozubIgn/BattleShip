@@ -1,5 +1,6 @@
 package app;
 
+import java.util.Scanner;
 
 public class Main {
 
@@ -23,8 +24,10 @@ public class Main {
 
         // humanPlayer.printPlayerOcean();
 
+        
+
         // Ship hit = new Ship(1, "X", 9, 8);
-        int[] coordinates = humanPlayer.createShoot();
+        int[] coordinates = humanPlayer.createShoot(fromUser());
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
         humanPlayer.recievedShoot(coordinates);
@@ -34,5 +37,13 @@ public class Main {
         humanPlayer.printPlayerOcean();
         // System.out.println(cruiser.shipSquares[0].look);
 
+    }
+    public static String fromUser(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter coordinates to shoot: ");
+        String userInput = scanner.nextLine();
+
+        return userInput;
     }
 }
