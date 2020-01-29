@@ -1,8 +1,5 @@
 package app;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Ocean {
 
     Square[][] ocean;
@@ -29,7 +26,7 @@ public class Ocean {
         String printedLine = "";
         for (Square[] line : ocean) {
             for (int i = 0; i < line.length; i++) {
-                printedLine += line[i].getLook() + "  ";
+                printedLine += line[i].getLook() + "";
             }
             System.out.println(printedLine);
             printedLine = "";
