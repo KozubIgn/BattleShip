@@ -23,15 +23,22 @@ public abstract class Player{
         System.out.flush();
     }
     
-    public abstract int[] createShoot();
+    public abstract int[] createShoot(String fromUser);
 
     public int[] convertCoordniates(String coordinates){
-        // char X = coordinates.charAt(0);
-        // char Y = coordinates.charAt(-1);
+        char X = coordinates.charAt(0);
+        // System.out.println(X);
+        char Y = coordinates.charAt(1);
+        // System.out.println(Y);
+
+        int x = Character.getNumericValue(X);
+        int y = Character.getNumericValue(Y);
 
         int[] result = new int[2];
-        result[0] = 0;
-        result[1] = 0;
+        // System.out.println(result);
+        result[0] = x - 10;
+        result[1] = y - 1;
+        // System.out.println("x" + x + "y" + y);
 
         return result;
     }
