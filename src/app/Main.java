@@ -24,10 +24,10 @@ public class Main {
         // humanPlayer.printPlayerOcean();
 
         // Ship hit = new Ship(1, "X", 9, 8);
-        String coordinates = humanPlayer.createShoot();
+        int[] coordinates = humanPlayer.createShoot();
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
-
+        humanPlayer.recievedShoot(coordinates);
         // Ship shot = new Ship(1, "X", 9,0);
         // humanPlayer.putShipOnOcean(shot);
         // humanPlayer.clearScreen();

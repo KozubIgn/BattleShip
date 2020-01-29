@@ -2,8 +2,9 @@ package app;
 
 public class HumanPlayer extends Player{
 
-    public String createShoot(){
-        return "A1"; // Scanner from user
+    public int[] createShoot(){
+        String fromUser = "A1";
+        return convertCoordniates(fromUser); // Scanner from user
     }
 
 }

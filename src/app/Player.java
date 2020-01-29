@@ -1,5 +1,7 @@
 package app;
 
+import java.util.*;
+
 public abstract class Player{
 
     public Ocean playerBoard;
@@ -21,10 +23,21 @@ public abstract class Player{
         System.out.flush();
     }
     
-    public abstract String createShoot();
+    public abstract int[] createShoot();
 
-    public String convertCoordniates(String coordinates){
-        return "00";
+    public int[] convertCoordniates(String coordinates){
+        // char X = coordinates.charAt(0);
+        // char Y = coordinates.charAt(-1);
+
+        int[] result = new int[2];
+        result[0] = 0;
+        result[1] = 0;
+
+        return result;
     }
 
+    public void recievedShoot(int[] coordinates){
+        playerBoard.shoot(coordinates); 
+
+    }
 }

@@ -3,8 +3,10 @@ package app;
 public class AIPlayer extends Player{
 
     public String createShoot(){
-        return "A1"; // Random from PC
+        String fromUser = "A1";
+        return "00";   // Random from PC
     }
+       
 
 
 }

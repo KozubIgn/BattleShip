@@ -50,4 +50,13 @@ public class Ocean {
         }
     }
 
+    public void shoot(int[] coordinates){
+
+        int x = coordinates[0];
+        int y = coordinates[1];
+
+        this.ocean[x][y].receiveHit();
+
+    }
+
 }

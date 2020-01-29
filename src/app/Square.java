@@ -10,4 +10,8 @@ public class Square {
     public String getLook() {
         return look;
     }
+
+    public void receiveHit(){
+        look = "[X]";
+    }
 }
