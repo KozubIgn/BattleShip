@@ -27,10 +27,12 @@ public class Main {
         
 
         // Ship hit = new Ship(1, "X", 9, 8);
-        int[] coordinates = humanPlayer.createShoot(fromUser());
+        int[] coordinates = humanPlayer.createShoot();
+        int[] coordinatesAI = AIPlayer.createShoot();
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
         humanPlayer.recievedShoot(coordinates);
+        
         // Ship shot = new Ship(1, "X", 9,0);
         // humanPlayer.putShipOnOcean(shot);
         // humanPlayer.clearScreen();
@@ -38,12 +40,12 @@ public class Main {
         // System.out.println(cruiser.shipSquares[0].look);
 
     }
-    public static String fromUser(){
+    // public static String fromUser(){
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter coordinates to shoot: ");
-        String userInput = scanner.nextLine();
+    //     Scanner scanner = new Scanner(System.in);
+    //     System.out.print("Please enter coordinates to shoot: ");
+    //     String userInput = scanner.nextLine();
 
-        return userInput;
-    }
+    //     return userInput;
+    
 }

@@ -21,7 +21,7 @@ public abstract class Player {
         System.out.flush();
     }
     
-    public abstract int[] createShoot(String fromUser);
+    public abstract int[] createShoot();
 
     public int[] convertCoordniates(String coordinates){
         char X = coordinates.charAt(0);
