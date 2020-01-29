@@ -2,12 +2,16 @@ package app;
 
 public class Square {
 
-    String look = "~";
+    String look = "[ ]";
 
     public Square() {
     }
 
     public String getLook() {
         return look;
+    }
+
+    public void receiveHit(){
+        look = "[X]";
     }
 }

@@ -8,17 +8,16 @@ public class Ship {
     int initialPosY;
     Square[] shipSquares;
     boolean isShip;
+    Square hit;
 
-    public Ship(int size, String shipLook, int initialPosX, int initialPosY, boolean isShip) {
+    public Ship(int size, String shipLook, int initialPosX, int initialPosY) {
         this.size = size;
         this.shipSquares = new Square[size];
         this.shipLook = shipLook;
         this.initialPosX = initialPosX;
         this.initialPosY = initialPosY;
-        this.isShip = isShip;
         fillShipSquares();
     }
-
 
     public String getLook() {
         return shipLook;
