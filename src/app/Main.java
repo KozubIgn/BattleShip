@@ -15,9 +15,9 @@ public class Main {
         Player humanPlayer = new HumanPlayer();
         // humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
-
-        Ship cruiser = new Ship(4, "[C]", 1, 0);
-        Ship battleship = new Ship(5, "[B]", 4, 3);
+        
+        Ship cruiser = new Ship("Criuser",4, "[C]", 1, 0);
+        Ship battleship = new Ship("battleship",5, "[B]", 4, 3);
         humanPlayer.putShipOnOcean(cruiser);
         humanPlayer.putShipOnOcean(battleship);
 
