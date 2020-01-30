@@ -23,35 +23,41 @@ public abstract class Player {
     
     public abstract int[] createShoot();
 
-    public int[] convertCoordniates(String coordinates){
-        char X = coordinates.charAt(0);
-        // System.out.println(X);
-        char Y = coordinates.charAt(1);
-        // System.out.println(Y);
+    // public int[] convertCoordinates(String coordinates){
+    //     char X = coordinates.charAt(0);
+    //     // System.out.println(X);
+    //     char Y = coordinates.charAt(1);
+    //     // System.out.println(Y);
 
-        int x = Character.getNumericValue(X);
-        int y = Character.getNumericValue(Y);
+    //     int x = Character.getNumericValue(X);
+    //     System.out.println(x);
+    //     int y = Character.getNumericValue(Y);
+    //     System.out.println(y);
 
-        int[] result = new int[2];
-        // System.out.println(result);
+    //     if (x >= 10 && x <= 20 && y >= 0 && y <= 10) {
 
-        if (coordinates.length() < 2){
-        result[0] = x - 10;
-        result[1] = y - 1;
-        }
-        else {
-            result[0] = x - 10;
-
-            result[1] = y + 8;
+    //         int[] result = new int[2];
         
-        // System.out.println("x" + x + "y" + y);
+    //         System.out.println(result);
 
-        return result;
-        }
-
-        return result;
-    
-    }
+    //         if (coordinates.length() > 2){
+    //             result[0] = x - 10;
+    //             result[1] = 10;
+    //             System.out.println("x" + x + " y" + y);
+    //         }
+    //         else{
+    //         result[0] = x - 10;
+    //         result[1] = y - 1;
+    //         System.out.println("x2 " + x + " y2 " + y);
+    //         }
+    //         return result;
+    //     }
+            
+    //     int[] result = new int[2];
+ 
+    //     return result;
+  
+    // }
 
     public void recievedShoot(int[] coordinates) {
         playerBoard.shoot(coordinates);

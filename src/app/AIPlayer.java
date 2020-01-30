@@ -12,7 +12,7 @@ public class AIPlayer extends Player {
 
         String result = String.valueOf(randomNumberX) + String.valueOf(randomNumberY);
 
-        return convertCoordniates(result); // Scanner from user
+        return convertCoordinates(result);
     }// Random from PC
 
 }

@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -22,7 +20,10 @@ public class Main {
         humanPlayer.putShipOnOcean(cruiser);
         humanPlayer.putShipOnOcean(battleship);
 
-        // humanPlayer.printPlayerOcean();
+        Ship cruiser2 = new Ship(4, "[C]", 5, 7);
+        Ship battleship2 = new Ship(5, "[B]", 2, 5);
+        humanPlayer.putShipOnOcean(cruiser2);
+        humanPlayer.putShipOnOcean(battleship2);
 
 
         // Ship hit = new Ship(1, "X", 9, 8);
