@@ -3,7 +3,7 @@ package app;
 public class Main {
 
     public static void main(String[] args) {
-
+        Menu.menu();
         // Ocean ocean = new Ocean();
         // ocean.fillOcean();
         // Ship battleship = new Ship(5, "B",4,4);
