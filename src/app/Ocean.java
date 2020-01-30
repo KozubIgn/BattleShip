@@ -3,9 +3,11 @@ package app;
 public class Ocean {
 
     Square[][] ocean;
+    static int ROWS = 10;
+    static int COLUMNS = 10;
 
     public Ocean() {
-        ocean = new Square[10][10];
+        ocean = new Square[ROWS][COLUMNS];
         this.fillOcean();
     }
 
@@ -49,6 +51,7 @@ public class Ocean {
             ocean[y][x+i] = ship.shipSquares[i];
         }
     }
+    public static Ship 
 
     public void shoot(int[] coordinates){
 

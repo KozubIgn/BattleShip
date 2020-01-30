@@ -9,7 +9,16 @@ public class AIPlayer extends Player {
         Random random = new Random();
         int randomNumberX = random.nextInt(numbers.length);
         int randomNumberY = random.nextInt(numbers.length);
-        return new int[] { randomNumberX, randomNumberY };
-    }// Random from PC
+
+        String result = String.valueOf(randomNumberX) + String.valueOf(randomNumberY);
+
+        return convertCoordniates(result); // Scanner from user
+    }
+    public void placeShip(Ship ship) {
+        int x = ship.getInitialPosX();
+        int y = ship.getInitialPosY();
+        for (int i = 0; i < ship.getSize(); i++) {
+            ocean[y][x+i] = ship.shipSquares[i];
+    // Random from PC
 
 }
