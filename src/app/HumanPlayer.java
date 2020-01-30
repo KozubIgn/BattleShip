@@ -18,7 +18,7 @@ public class HumanPlayer extends Player{
         // int userInputDigit = scanner.nextInt();
 
         UserGlobalInput userInput = new UserGlobalInput();
-        userInput.getIntInput();
+        //userInput.getIntInput();
         System.out.print("Please enter letter coordinate to shoot: ");
         String x = userInput.getStringInput();
         int y = userInput.getIntInput();

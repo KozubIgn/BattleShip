@@ -21,14 +21,24 @@ public class Ocean {
             }
         }
     }
-
+ 
     public void printOcean() {
         String printedLine = "";
+        System.out.println("     A  B  C  D  E  F  G  H  I  J");
+        System.out.println();
+        int n =1;
         for (Square[] line : ocean) {
+            
             for (int i = 0; i < line.length; i++) {
                 printedLine += line[i].getLook() + "";
             }
-            System.out.println(printedLine);
+            if (n == 10){
+                System.out.println(n+"  "+ printedLine);
+
+            }
+            else {
+            System.out.println(n+"   "+ printedLine);}
+            ++n;
             printedLine = "";
         }System.out.println("");
     }
