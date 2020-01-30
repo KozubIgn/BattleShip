@@ -14,8 +14,8 @@ public abstract class Player {
         playerBoard.printOcean();
     }
 
-    public void putShipOnOcean(Ship ship, String position) {
-        playerBoard.placeShip(ship, position);
+    public void putShipOnOcean(int x,int y, int size, String position) {
+        playerBoard.placeShip(x, y, size, position);
     }
 
     public void clearScreen() {

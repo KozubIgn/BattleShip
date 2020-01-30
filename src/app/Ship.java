@@ -1,7 +1,7 @@
 package app;
 
 public class Ship {
-
+    String name;
     int size;
     String shipLook;
     int initialPosX;
@@ -10,7 +10,8 @@ public class Ship {
     boolean isShip;
     Square hit;
 
-    public Ship(int size, String shipLook, int initialPosX, int initialPosY) {
+    public Ship(String name, int size, String shipLook) {
+       this.name = name;
         this.size = size;
         this.shipSquares = new Square[size];
         this.shipLook = shipLook;

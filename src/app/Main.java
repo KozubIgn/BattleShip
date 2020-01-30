@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,16 +18,47 @@ public class Main {
         humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
 
+        String lettersCoordinates = "ABCDEFGHIJ";
+        Ship[] ships = new Ship[] { new Ship("cruizer", 3, "[c]"), new Ship("battleship", 4, "[B]"),
+                new Ship("carrier", 5, "[C]"), new Ship("submarine", 3, "[S]"), new Ship("destroyer", 2, "[D]") };
 
+        // for (Ship ship:ships){
+        //     System.out.println("Your ship:" + ship.name);
+        //     System.out.println("Do you want to put ship horizontaly (H) or verticaly(V)?: ");
+        //     UserGlobalInput userInput = new UserGlobalInput();
+        //     String position = userInput.getStringInput().toUpperCase();
+            
+        //     System.out.println("Please enter letter coordinate to set your ship: ");
+        //    String x = userInput.getStringInput().toUpperCase();
+            
+        //     System.out.println("Please enter letter coordinate to set your ship: ");
+        //     int y = userInput.getIntInput();
 
-        // Ship cruiser = new Ship(3, "[c]", 0, 1 , true);
-        Ship battleship = new Ship(4, "[B]", 4, 3);
-        // Ship carrier = new Ship(5, "[C]", 3, 5, true);
-        // Ship submarine = new Ship(3, "[S]", 3, 7, true);
-        // Ship destroyer = new Ship(2, "[D]", 3, 9, true);
+        // int coordinatesLetterX = lettersCoordinates.indexOf(x);
+        //     humanPlayer.putShipOnOcean(coordinatesLetterX, y, ship.size, position);
+        //     humanPlayer.printPlayerOcean();
+        // }
+        
+        for (Ship ship:ships){
+            Random random = new Random();
+            int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int randonNumberposition = random.nextInt(2);
+            String position = "";
+            if (randonNumberposition == 0){
+                position = "V";
+            }else{
+                position = "H";
+            }
+            int randomNumberX = random.nextInt(numbers.length);
+            int randomNumberY = random.nextInt(numbers.length);
 
-        // humanPlayer.putShipOnOcean(cruiser);
-        humanPlayer.putShipOnOcean(battleship, "V");
+            aiPlayer.putShipOnOcean(randomNumberX, randomNumberY, ship.size, position);
+            aiPlayer.printPlayerOcean();
+        }
+
+         
+                // humanPlayer.putShipOnOcean(cruiser);
+        // humanPlayer.putShipOnOcean(battleship, "V");
         // humanPlayer.putShipOnOcean(carrier);
         // humanPlayer.putShipOnOcean(submarine);
         // humanPlayer.putShipOnOcean(destroyer);
@@ -34,6 +67,7 @@ public class Main {
 
 
         // Ship hit = new Ship(1, "X", 9, 8);
+        while(true){
         int[] coordinates = humanPlayer.createShoot();
         int[] coordinates2 = aiPlayer.createShoot();
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
@@ -45,7 +79,7 @@ public class Main {
         // humanPlayer.putShipOnOcean(shot);
         // humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
-        aiPlayer.printPlayerOcean();
+        aiPlayer.printPlayerOcean();}
         // System.out.println(cruiser.shipSquares[0].look);
 
     }

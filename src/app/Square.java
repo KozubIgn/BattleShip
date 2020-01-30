@@ -4,7 +4,7 @@ public class Square {
 
     String look = "[ ]";
 
-    public Square() {
+    public Square(){
     }
 
     public String getLook() {
@@ -14,4 +14,8 @@ public class Square {
     public void receiveHit(){
         look = "[X]";
     }
+
+	public String displayLook() {
+		return null;
+	}
 }
