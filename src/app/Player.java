@@ -2,6 +2,8 @@ package app;
 
 public abstract class Player {
 
+    public Ship[] ships;
+
     public Ocean playerBoard;
 
     public Player() {
@@ -63,4 +65,5 @@ public abstract class Player {
         playerBoard.shoot(coordinates);
 
     }
+
 }

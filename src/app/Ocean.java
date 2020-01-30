@@ -43,13 +43,25 @@ public class Ocean {
 
     
     public void placeShip(Ship ship) {
+        UserGlobalInput userInput = new UserGlobalInput();
+
+        
         int x = ship.getInitialPosX();
         int y = ship.getInitialPosY();
-        for (int i = 0; i < ship.getSize(); i++) {
-            ocean[y][x+i] = ship.shipSquares[i];
+        
+        if (userInput.getStringInput() == "V"){ 
+            for (int i = 0; i < ship.getSize(); i++) {
+                ocean[y + i][x] = ship.shipSquares[i];
+                ocean[y + i + 1][x + 1] = ship.shipSquares[1];
         }
     }
+        else if (userInput.getStringInput() == "H"){
+            for (int i = 0; i < ship.getSize(); i++) {
+                ocean[y][x + i] = ship.shipSquares[i];
 
+            }
+        }
+    }
     public void shoot(int[] coordinates){
 
         int x = coordinates[0];
@@ -58,5 +70,7 @@ public class Ocean {
         this.ocean[x][y].receiveHit();
 
     }
+
+    
 
 }

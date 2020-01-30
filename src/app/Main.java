@@ -16,15 +16,21 @@ public class Main {
         humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
 
-        Ship cruiser = new Ship(4, "[C]", 1, 0);
-        Ship battleship = new Ship(5, "[B]", 4, 3);
-        humanPlayer.putShipOnOcean(cruiser);
-        humanPlayer.putShipOnOcean(battleship);
 
-        Ship cruiser2 = new Ship(4, "[C]", 5, 7);
-        Ship battleship2 = new Ship(5, "[B]", 2, 5);
-        humanPlayer.putShipOnOcean(cruiser2);
-        humanPlayer.putShipOnOcean(battleship2);
+
+        // Ship cruiser = new Ship(3, "[c]", 0, 1 , true);
+        Ship battleship = new Ship(4, "[B]", 4, 3, true);
+        // Ship carrier = new Ship(5, "[C]", 3, 5, true);
+        // Ship submarine = new Ship(3, "[S]", 3, 7, true);
+        // Ship destroyer = new Ship(2, "[D]", 3, 9, true);
+
+        // humanPlayer.putShipOnOcean(cruiser);
+        humanPlayer.putShipOnOcean(battleship);
+        // humanPlayer.putShipOnOcean(carrier);
+        // humanPlayer.putShipOnOcean(submarine);
+        // humanPlayer.putShipOnOcean(destroyer);
+
+
 
 
         // Ship hit = new Ship(1, "X", 9, 8);
