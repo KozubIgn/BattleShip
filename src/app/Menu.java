@@ -46,5 +46,6 @@ public class Menu {
 
             choice = menu();
         }
-    }
-    }
+
+in.close();    }
+}
