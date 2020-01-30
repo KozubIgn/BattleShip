@@ -19,14 +19,14 @@ public class Main {
         Player humanPlayer = new HumanPlayer();
         humanPlayer.printPlayerOcean();
 
-        Ship cruiser = new Ship(4, "C", 0,0);
-        humanPlayer.putShipOnOcean(cruiser);
+        // Ship cruiser = new Ship(4, "C", 0,0);
+        //humanPlayer.putShipOnOcean(cruiser);
 
         humanPlayer.printPlayerOcean();
 
         // Ship hit = new Ship(1, "X", 9, 8);
 
-        humanPlayer.playerBoard.ocean[0][1].look = "!";
+        //humanPlayer.playerBoard.ocean[0][1].look = "!";
         // Ship shot = new Ship(1, "X", 9,0);
         // humanPlayer.putShipOnOcean(shot);
         humanPlayer.printPlayerOcean();

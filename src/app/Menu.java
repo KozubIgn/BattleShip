@@ -9,8 +9,7 @@ public class Menu {
         System.out.println("     *                 MENU                 *");
         System.out.println("     ****************************************");
         System.out.println("     1. Opponent H/C");
-        System.out.println("     2. Place Ships");
-        System.out.println("     3. Start game");
+        System.out.println("     2. Start game");
         System.out.println("     0. End");
 
         Scanner in = new Scanner(System.in);
