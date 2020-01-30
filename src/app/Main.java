@@ -19,19 +19,21 @@ public class Main {
         humanPlayer.printPlayerOcean();
 
         String lettersCoordinates = "ABCDEFGHIJ";
-        Ship[] ships = new Ship[] { new Ship("cruizer", 3, "[c]"), new Ship("battleship", 4, "[B]"),
-                new Ship("carrier", 5, "[C]"), new Ship("submarine", 3, "[S]"), new Ship("destroyer", 2, "[D]") };
+        Ship[] ships = new Ship[] { new Ship("Cruizer", 3, "[c]"), new Ship("Battleship", 4, "[B]"),
+                new Ship("Carrier", 5, "[C]"), new Ship("Submarine", 3, "[S]"), new Ship("Destroyer", 2, "[D]") };
 
-        // for (Ship ship:ships){
-        //     System.out.println("Your ship:" + ship.name);
-        //     System.out.println("Do you want to put ship horizontaly (H) or verticaly(V)?: ");
+        
+        //poniżej odkomentować - ustawianie statków playera !!!
+                // for (Ship ship:ships){
+        //     System.out.println("Your ship: " + ship.name + "(" + ship.size + ")");
+        //     System.out.println("Horizontaly (H) or verticaly(V)?: ");
         //     UserGlobalInput userInput = new UserGlobalInput();
         //     String position = userInput.getStringInput().toUpperCase();
             
-        //     System.out.println("Please enter letter coordinate to set your ship: ");
+        //     System.out.println("Enter LETTER(x) coordinate to set your ship: ");
         //    String x = userInput.getStringInput().toUpperCase();
             
-        //     System.out.println("Please enter letter coordinate to set your ship: ");
+        //     System.out.println(" Enter DIGIT(y) coordinate to set your ship: ");
         //     int y = userInput.getIntInput();
 
         // int coordinatesLetterX = lettersCoordinates.indexOf(x);
@@ -85,10 +87,10 @@ public class Main {
     }
     // public static String fromUser(){
 
-    //     Scanner scanner = new Scanner(System.in);
-    //     System.out.print("Please enter coordinates to shoot: ");
-    //     String userInput = scanner.nextLine();
+    // Scanner scanner = new Scanner(System.in);
+    // System.out.print("Please enter coordinates to shoot: ");
+    // String userInput = scanner.nextLine();
 
-    //     return userInput;
-    
+    // return userInput;
+
 }

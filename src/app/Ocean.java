@@ -65,14 +65,13 @@ public class Ocean {
                 Square shipSquare = new Square();
                 shipSquare.look = "[8]";
                 ocean[y + i][x] = shipSquare;
-                System.out.println("statek");
+
             }
         } else if (Objects.equals(position, new String("H"))) {
             for (int i = 0; i < size; i++) {
                 Square shipSquare = new Square();
                 shipSquare.look = "[8]";
                 ocean[y][y + i] = shipSquare;
-                System.out.println("f");
 
             }
         }
