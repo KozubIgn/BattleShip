@@ -12,6 +12,7 @@ public class Main {
         // ocean.printOcean();
 
         Player humanPlayer = new HumanPlayer();
+        AIPlayer aiPlayer = new AIPlayer();
         humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
 
@@ -28,15 +29,17 @@ public class Main {
 
         // Ship hit = new Ship(1, "X", 9, 8);
         int[] coordinates = humanPlayer.createShoot();
-        // int[] coordinates2 = AIPlayer.createShoot(); // is not working
+        int[] coordinates2 = aiPlayer.createShoot();
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
         humanPlayer.recievedShoot(coordinates);
+        aiPlayer.recievedShoot(coordinates2);
         
         // Ship shot = new Ship(1, "X", 9,0);
         // humanPlayer.putShipOnOcean(shot);
         // humanPlayer.clearScreen();
         humanPlayer.printPlayerOcean();
+        aiPlayer.printPlayerOcean();
         // System.out.println(cruiser.shipSquares[0].look);
 
     }
