@@ -14,5 +14,7 @@ public class UserGlobalInput {
         
         return scanner.nextInt();
     }
-
+public void scanerClose() {
+    scanner.close();
+}
 }

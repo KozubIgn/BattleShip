@@ -16,12 +16,14 @@ public class HumanPlayer extends Player{
         // String lettersCoordinates = "ABCDEFGHIJ";
         // System.out.print("Please enter digit coordinate to shoot: ");
         // int userInputDigit = scanner.nextInt();
-
-        UserGlobalInput userInput = new UserGlobalInput();
+        
         //userInput.getIntInput();
         System.out.print("Please enter letter coordinate to shoot: ");
-        String x = userInput.getStringInput();
-        int y = userInput.getIntInput();
+        UserGlobalInput userInput = new UserGlobalInput();
+
+        String x = userInput.getStringInput().toUpperCase();
+        // userInput.scanerClose();
+        
 
 
         String lettersCoordinates = "ABCDEFGHIJ";
@@ -29,13 +31,14 @@ public class HumanPlayer extends Player{
         System.out.println("X " + coordinatesLetterX);
         
         System.out.print("Please enter digit coordinate to shoot: ");
+        int y = userInput.getIntInput();
 
         int coordinatesDigitY = y - 1;
         System.out.println("Y "+ coordinatesDigitY);
 
         int[] coordinates = new int[2];
-        coordinates[0] = coordinatesLetterX;
-        coordinates[1] = coordinatesDigitY;
+        coordinates[1] = coordinatesLetterX;
+        coordinates[0] = coordinatesDigitY;
 
 
         return coordinates; // Scanner from user
