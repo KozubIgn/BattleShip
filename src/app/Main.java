@@ -20,12 +20,16 @@ public class Main {
 
         // Ship cruiser = new Ship(3, "[c]", 0, 1 , true);
         Ship battleship = new Ship(4, "[B]", 4, 3);
-        // Ship carrier = new Ship(5, "[C]", 3, 5, true);
+        Ship carrier = new Ship(5, "[C]", 3, 5);
         // Ship submarine = new Ship(3, "[S]", 3, 7, true);
         // Ship destroyer = new Ship(2, "[D]", 3, 9, true);
+        // String position = battleship.getPosition();
+        // System.out.println("Position Main: " + position);
+        humanPlayer.putShipOnOcean(carrier, "V");
+        String position = battleship.getPosition();
+        System.out.println("!!!!!!!!!" + position);
 
-        // humanPlayer.putShipOnOcean(cruiser);
-        humanPlayer.putShipOnOcean(battleship, "V");
+        humanPlayer.putShipOnOcean(battleship, "H");
         // humanPlayer.putShipOnOcean(carrier);
         // humanPlayer.putShipOnOcean(submarine);
         // humanPlayer.putShipOnOcean(destroyer);

@@ -3,7 +3,7 @@ package app;
 public abstract class Player {
 
     public Ship[] ships;
-
+    public String position;
     public Ocean playerBoard;
 
     public Player() {
@@ -15,6 +15,8 @@ public abstract class Player {
     }
 
     public void putShipOnOcean(Ship ship, String position) {
+        System.out.println("Metoda putShipOnOcean + Ship " + ship + " Position " + position);
+        this.position = position;
         playerBoard.placeShip(ship, position);
     }
 
