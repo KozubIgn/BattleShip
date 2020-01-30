@@ -52,20 +52,17 @@ public class Ocean {
     // }
 
     
-    public void placeShip(Ship ship) {
-        UserGlobalInput userInput = new UserGlobalInput();
-
-        
+    public void placeShip(Ship ship, String position) {
+ 
         int x = ship.getInitialPosX();
         int y = ship.getInitialPosY();
         
-        if (userInput.getStringInput() == "V"){ 
+        if (position == "V"){ 
             for (int i = 0; i < ship.getSize(); i++) {
                 ocean[y + i][x] = ship.shipSquares[i];
-                ocean[y + i + 1][x + 1] = ship.shipSquares[1];
         }
     }
-        else if (userInput.getStringInput() == "H"){
+        else if (position == "H"){
             for (int i = 0; i < ship.getSize(); i++) {
                 ocean[y][x + i] = ship.shipSquares[i];
 

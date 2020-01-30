@@ -10,7 +10,7 @@ public class Ship {
     boolean isShip;
     Square hit;
 
-    public Ship(int size, String shipLook, int initialPosX, int initialPosY, boolean isHorizontal) {
+    public Ship(int size, String shipLook, int initialPosX, int initialPosY) {
         this.size = size;
         this.shipSquares = new Square[size];
         this.shipLook = shipLook;
