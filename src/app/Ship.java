@@ -56,7 +56,7 @@ public class Ship {
     }
 
     // returns true of ship squares is on board, false otherwise
-    boolean containsSquare(Square square) {
+    public boolean containsSquare(Square square) {
         if (square.getRow() < 10 && square.getRow() >= 0 && square.getColumn() < 10 && square.getColumn() >= 0) {
             return true;
         }
@@ -64,7 +64,7 @@ public class Ship {
     }
 
     // checks for collision between ships
-    boolean isCollisionWith(Ship ship) {
+    public boolean isCollisionWith(Ship ship) {
         // check each square and if they are equal than there
         // is a collision
         Square square[] = ship.getShipPoints();
@@ -81,7 +81,7 @@ public class Ship {
     }
 
     // fires at ship
-    void shotFiredAtPoint(Square square) {
+    public void shotFiredAtPoint(Square square) {
         if (isHitAtSquare(square)) {
             shipHitPoints.add(square);
         } else {
@@ -89,7 +89,7 @@ public class Ship {
     }
 
     // returns true if ship got hit, false otherwise
-    boolean isHitAtSquare(Square square) {
+    public boolean isHitAtSquare(Square square) {
         for (int i = 0; i < shipSquare.length; i++) {
             if (shipSquare[i].getRow() == square.getRow() && shipSquare[i].getColumn() == square.getColumn()) {
                 return true;
@@ -99,12 +99,12 @@ public class Ship {
     }
 
     // return number of hits that ship received
-    int hitCount() {
+    public int hitCount() {
         return shipHitPoints.size();
     }
 
     // checks to see if a ship has sunk
-    void sunkStatus(int numOfShips) {
+    public void sunkStatus(int numOfShips) {
         if (getShipSize() == hitCount()) {
             numOfShips--;
             System.out.println("You have sunked a ship with length " + getShipSize());
@@ -127,29 +127,32 @@ public class Ship {
     public int getSize() {
         return size;
     }
+
     // random point on board as the start of ship
-    public  static Square getRandomStartPoint(){
+    public static Square getRandomStartPoint() {
         Random random = new Random();
-        int x= random.nextInt(10);
+        int x = random.nextInt(10);
         int y = random.nextInt(10);
-        return new Square(x,y);}
-//return random length for ship length
-        public static int getRandomShipLength(){
-            Random random = new Random();
-            return random.nextInt(2-6);
-        }
-// generate random orientation for ship
-public static boolean getOrientation(){
-    Random random = new Random();
-    boolean vertical = true;
-
-    if (random.nextInt(2)==1){
-        vertical = false;
-
+        return new Square(x, y);
     }
-    return vertical;
-}
-    
+
+    // return random length for ship length
+    public static int getRandomShipLength() {
+        Random random = new Random();
+        return random.nextInt(2 - 6);
+    }
+
+    // generate random orientation for ship
+    public static boolean getOrientation() {
+        Random random = new Random();
+        boolean vertical = true;
+
+        if (random.nextInt(2) == 1) {
+            vertical = false;
+
+        }
+        return vertical;
+    }
 
     // public void fillShipSquares() {
     // for (int i = 0; i < shipSquares.length; i++) {
