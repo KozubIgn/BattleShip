@@ -46,19 +46,7 @@ public class Ocean {
         System.out.println("");
     }
 
-    // public List<Integer> shipHelper() {
-    // List<Integer> shipLen = new ArrayList<>();
-    // for (int i = 2; i < 6; i++) {
-    // shipLen.add(i);
-    // }
-    // return shipLen;
-    // }
-
-    // public void placeShip(Ship ship, String position) {
     public void placeShip(int x, int y, int size, String position) {
-
-        // int x = ship.getInitialPosX();
-        // int y = ship.getInitialPosY();
 
         if (Objects.equals(position, new String("V"))) {
             for (int i = 0; i < size; i++) {
