@@ -71,7 +71,7 @@ public class Ocean {
             for (int i = 0; i < size; i++) {
                 Square shipSquare = new Square();
                 shipSquare.look = "[8]";
-                ocean[y][y + i] = shipSquare;
+                ocean[y][x + i] = shipSquare;
 
             }
         }

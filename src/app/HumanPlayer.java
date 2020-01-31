@@ -35,8 +35,8 @@ public class HumanPlayer extends Player {
         System.out.println("Y " + coordinatesDigitY);
 
         int[] coordinates = new int[2];
-        coordinates[1] = coordinatesLetterX;
-        coordinates[0] = coordinatesDigitY;
+        coordinates[0] = coordinatesLetterX;
+        coordinates[1] = coordinatesDigitY;
 
         return coordinates; // Scanner from user
     }

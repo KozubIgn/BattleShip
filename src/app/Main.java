@@ -23,23 +23,23 @@ public class Main {
                 new Ship("Carrier", 5, "[C]"), new Ship("Submarine", 3, "[S]"), new Ship("Destroyer", 2, "[D]") };
 
         
-        //poniżej odkomentować - ustawianie statków playera !!!
-                // for (Ship ship:ships){
-        //     System.out.println("Your ship: " + ship.name + "(" + ship.size + ")");
-        //     System.out.println("Horizontaly (H) or verticaly(V)?: ");
-        //     UserGlobalInput userInput = new UserGlobalInput();
-        //     String position = userInput.getStringInput().toUpperCase();
+        // poniżej odkomentować - ustawianie statków playera !!!
+                for (Ship ship:ships){
+            System.out.println("Your ship: " + ship.name + "(" + ship.size + ")");
+            System.out.println("Horizontaly (H) or verticaly(V)?: ");
+            UserGlobalInput userInput = new UserGlobalInput();
+            String position = userInput.getStringInput().toUpperCase();
             
-        //     System.out.println("Enter LETTER(x) coordinate to set your ship: ");
-        //    String x = userInput.getStringInput().toUpperCase();
+            System.out.println("Enter LETTER(x) coordinate to set your ship: ");
+           String x = userInput.getStringInput().toUpperCase();
             
-        //     System.out.println(" Enter DIGIT(y) coordinate to set your ship: ");
-        //     int y = userInput.getIntInput();
+            System.out.println(" Enter DIGIT(y) coordinate to set your ship: ");
+            int y = userInput.getIntInput();
 
-        // int coordinatesLetterX = lettersCoordinates.indexOf(x);
-        //     humanPlayer.putShipOnOcean(coordinatesLetterX, y, ship.size, position);
-        //     humanPlayer.printPlayerOcean();
-        // }
+        int coordinatesLetterX = lettersCoordinates.indexOf(x);
+            humanPlayer.putShipOnOcean(coordinatesLetterX, y-1, ship.size, position);
+            humanPlayer.printPlayerOcean();
+        }
         
         for (Ship ship:ships){
             Random random = new Random();
@@ -74,8 +74,8 @@ public class Main {
         int[] coordinates2 = aiPlayer.createShoot();
         // humanPlayer.playerBoard.ocean[0][1].look = "[X]";
         // humanPlayer.playerBoard.ocean[0][0].look = "[X]";
-        humanPlayer.recievedShoot(coordinates);
-        aiPlayer.recievedShoot(coordinates2);
+        humanPlayer.recievedShoot(coordinates2);
+        aiPlayer.recievedShoot(coordinates);
         
         // Ship shot = new Ship(1, "X", 9,0);
         // humanPlayer.putShipOnOcean(shot);
